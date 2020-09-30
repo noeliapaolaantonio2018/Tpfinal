@@ -1,12 +1,13 @@
-package com.example.tpfinal;
+package com.example.tpfinal.ui.login;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import androidx.annotation.Nullable;
+
+import com.example.tpfinal.R;
+
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -31,7 +32,7 @@ public class Login extends AppCompatActivity {
         iniciar_sesion=findViewById(R.id.btn_ir_inicioSesion);
 
         vm=ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(Login.class);
-        vm=getError().observe(this,new Observer<String>() {
+        vm=getError().observe(owner:this,new Observer<String>() {
             @Override
             public void onChanged(String error) {//cuando cambia muestra el error
                 Toast.makeText(getApplicationContext(), error, Toast.LENGTH_LONG).show();

@@ -5,12 +5,12 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_perfil"
             android:icon="@drawable/perfil"
             android:title="Perfil" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:id="@+id/nav_propiedades"
+            android:icon="@drawable/propiedades"
             android:title="@string/Propiedades" />
         <item
             android:id="@+id/nav_slideshow"
@@ -18,7 +18,7 @@
             android:title="@string/Inquilinos" />
         <item
             android:id="@+id/pagosFragment"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/pagos"
             android:title="@string/Pagos" />
         <item
             android:id="@+id/contratosFragment"
