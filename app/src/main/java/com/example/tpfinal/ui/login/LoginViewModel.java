@@ -7,10 +7,11 @@ import android.content.Intent;
 import com.example.tpfinal.MainActivity;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-public class LoginViewModel extends  androidViewModel {
+public class LoginViewModel extends AndroidViewModel {
     private Context context;
     private MutableLiveData<String> error;
 
