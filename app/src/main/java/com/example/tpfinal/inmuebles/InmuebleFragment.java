@@ -19,7 +19,7 @@ import android.widget.ImageView;
 import com.example.tpfinal.R;
 import com.example.tpfinal.modelo.Inmueble;
 
-import java.util.List;
+
 
 public class InmuebleFragment extends Fragment {
 

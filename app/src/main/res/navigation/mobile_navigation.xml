@@ -29,7 +29,7 @@
 
     <fragment
         android:id="@+id/contratosFragment"
-        android:name="com.example.tpfinal.ui.contratos.ContratosFragment"
+        android:name="com.example.tpfinal.contratos.ContratosFragment"
         android:label="contratos_fragment"
         tools:layout="@layout/contratos_fragment" />
      />

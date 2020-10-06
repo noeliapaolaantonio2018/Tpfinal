@@ -204,7 +204,8 @@
         android:layout_height="45dp"
         android:src="?android:attr/alertDialogIcon"
         tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="98dp" />
+        tools:layout_editor_absoluteY="98dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView13"
@@ -212,5 +213,6 @@
         android:layout_height="25dp"
         android:src="@drawable/btn_facebook"
         tools:layout_editor_absoluteX="381dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

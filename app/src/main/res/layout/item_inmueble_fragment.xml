@@ -44,4 +44,12 @@
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/ivImagenInmueble"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="69dp"
+        android:layout_height="61dp"
+        app:srcCompat="@android:drawable/star_big_on"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="654dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

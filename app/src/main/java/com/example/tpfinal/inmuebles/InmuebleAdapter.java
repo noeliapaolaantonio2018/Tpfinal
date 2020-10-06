@@ -17,7 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class InmuebleAdapter extends ArrayAdapter<Inmueble> {
-    private Context context;
+    public Context context;
     private List<Inmueble> inmuebles;
     private LayoutInflater inflater;
 
