@@ -9,21 +9,18 @@ import androidx.lifecycle.ViewModel;
 public class PerfilViewModel extends ViewModel {
 
     private MutableLiveData<Propietario> propietario;
-
     public PerfilViewModel() {
-        propietario = new MutableLiveData<>();
-
+        super();
     }
-
     public LiveData<Propietario> getPropietario() {
-        if(propietario==null){
-            propietario=new MutableLiveData<>();
+        if (propietario == null) {
+            propietario = new MutableLiveData<>();
         }
         return propietario;
     }
-    public  void recuperarPrpietario(){
-        Propietario p=new Propietario("Antonio","Noelia","noelia@gamil.com","noelia");
-        propietario.setValue(p);
-        }
 
+    public void cargarPropietario() {
+        Propietario propietario = new Propietario(1, "31276462", "Noelia", "Antonio", "noelia@gmail.com", "noelia", "2664869278");
+        this.propietario.setValue(propietario);
     }
+}

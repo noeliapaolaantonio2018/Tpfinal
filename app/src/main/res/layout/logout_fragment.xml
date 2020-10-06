@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pagos.PagosFragment">
+    android:background="#9C27B0"
+    tools:context=".logout.LogoutFragment">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="141dp"
+        android:layout_height="122dp"
+        android:src="@android:drawable/star_big_on" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#9C27B0"
-        android:text="Pagos fragment" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="95dp"
-        android:layout_height="84dp"
-        android:src="@android:drawable/btn_star_big_on" />
+        android:text="Log out fragment" />
 
 </FrameLayout>

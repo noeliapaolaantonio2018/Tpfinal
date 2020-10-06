@@ -10,10 +10,12 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="perfil">Perfil</string>
-    <string name="Propiedades">Propiedades</string>
+    <string name="Perfil">Perfil</string>
+    <string name="Inmuebles">Inmuebles</string>
     <string name="Inquilinos">Inquilinos</string>
-    <string name="Pagos">Pagos</string>
     <string name="Contratos">Contratos</string>
-    <string name="cerrar_sesion">Cerrar sesion</string>
+    <string name="Pagos">Pagos</string>
+    <string name="Logout">Log out</string>
+    <string name="Cerrar_sesión">Cerrar sesión</string>
+    <string name="Propiedades">Propiedades</string>
 </resources>
