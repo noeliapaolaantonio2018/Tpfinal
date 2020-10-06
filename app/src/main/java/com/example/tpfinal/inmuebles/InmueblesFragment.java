@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,9 +28,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class InmueblesFragment extends Fragment {
-    private ListView lvInmuebles;
+    private RecyclerView rvInmuebles;
     private InmueblesViewModel inmueblesViewModel;
-    ArrayAdapter<Inmueble> adapter;
+    InmuebleAdapter adapter;
     Context context;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -41,27 +43,17 @@ public class InmueblesFragment extends Fragment {
     }
 
     private void inicializar(View view) {
-        lvInmuebles = view.findViewById(R.id.lvInmuebles);
+        rvInmuebles = view.findViewById(R.id.rvInmuebles);
         inmueblesViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(InmueblesViewModel.class);
         inmueblesViewModel.getInmuebles().observe(getViewLifecycleOwner(), new Observer<ArrayList<Inmueble>>() {
             @Override
-
-
-                public void onChanged(ArrayList<Inmueble> inmuebles) {
-                    adapter = new InmuebleAdapter(context, R.layout.item_inmueble_fragment, inmuebles, getLayoutInflater());
-                    lvInmuebles.setAdapter(adapter);
-                    lvInmuebles.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                            Bundle bundle = new Bundle();
-                            Inmueble inmueble = adapter.getItem(i);
-                            Log.d("Salida: ", inmueble.getDireccion());
-                            bundle.putSerializable("inmueble", (Serializable) inmueble);////////////////error
-                            Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.inmuebleFragment, bundle);
-                        }
-                    });
-                }
-            });
-               inmueblesViewModel.cargarInmuebles();
+            public void onChanged(ArrayList<Inmueble> inmuebles) {
+                GridLayoutManager gridLayoutManager= new GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false);
+                rvInmuebles.setLayoutManager(gridLayoutManager);
+                adapter = new InmuebleAdapter(context,inmuebles,getLayoutInflater());
+                rvInmuebles.setAdapter(adapter);
+            }
+        });
+        inmueblesViewModel.cargarInmuebles();
         }
 }
