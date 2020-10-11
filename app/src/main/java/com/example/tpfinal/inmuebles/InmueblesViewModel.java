@@ -39,4 +39,12 @@ public class InmueblesViewModel extends AndroidViewModel {
         this.inmuebles.setValue(inmuebles);
 
     }
+    public void cargarInmueblesConContrato() {
+        ArrayList<Inmueble> inmuebles = new ArrayList<> ();
+        inmuebles.add(new Inmueble(1, "las heras", "Residencial", "Vivienda", 2, 30000, null, true, R.drawable.casa1));
+        inmuebles.add(new Inmueble(2, "av. Illia 43", "Comercial", "Vivienda", 2, 25000, null, true, R.drawable.casa2));
+        inmuebles.add(new Inmueble(3, "av.la finur 34", "Residencial", "Vivienda", 2, 35000, null, true, R.drawable.casa3));
+        this.inmuebles.setValue(inmuebles);
+
+    }
 }

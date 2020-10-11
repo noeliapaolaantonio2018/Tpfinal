@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.tpfinal.R;
 import com.example.tpfinal.modelo.Inmueble;
@@ -24,12 +25,12 @@ import com.example.tpfinal.modelo.Inmueble;
 public class InmuebleFragment extends Fragment {
 
     private InmuebleViewModel inmuebleViewModel;
-    private EditText etId;
-    private EditText etDireccion;
-    private EditText etTipo;
-    private EditText etUso;
-    private EditText etAmbientes;
-    private EditText etPrecio;
+    private TextView tvId;
+    private TextView tvDireccion;
+    private TextView tvTipo;
+    private TextView tvUso;
+    private TextView tvAmbientes;
+    private TextView tvPrecio;
     private CheckBox cbEstado;
     private ImageView ivImagenInmueble;
 
@@ -43,28 +44,26 @@ public class InmuebleFragment extends Fragment {
     }
 
     private void inicializar(View view) {
-        etId = view.findViewById(R.id.etId);
-        etDireccion = view.findViewById(R.id.etDireccion);
-        etTipo = view.findViewById(R.id.etTipo);
-        etUso = view.findViewById(R.id.etUso);
-        etAmbientes = view.findViewById(R.id.etAmbientes);
-        etPrecio = view.findViewById(R.id.etPrecio);
+        tvId = view.findViewById(R.id.tvId);
+        tvDireccion = view.findViewById(R.id.tvDireccion);
+        tvTipo = view.findViewById(R.id.tvTipo);
+        tvUso = view.findViewById(R.id.tvUso);
+        tvAmbientes = view.findViewById(R.id.tvAmbientes);
+        tvPrecio = view.findViewById(R.id.tvPrecio);
         cbEstado = view.findViewById(R.id.cbEstado);
         ivImagenInmueble = view.findViewById(R.id.ivImagenInmueble);
         inmuebleViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(InmuebleViewModel.class);
         inmuebleViewModel.getInmueble().observe(getActivity(), new Observer<Inmueble>() {
             @Override
             public void onChanged(Inmueble inmueble) {
-
-                etId.setText(inmueble.getIdInmueble() + "");
-                etDireccion.setText(inmueble.getDireccion());
-                etTipo.setText(inmueble.getTipo());
-                etUso.setText(inmueble.getUso());
-                etAmbientes.setText(inmueble.getAmbientes() + "");
-                etPrecio.setText("$" + inmueble.getPrecio());
+                tvId.setText(inmueble.getIdInmueble() + "");
+                tvDireccion.setText(inmueble.getDireccion());
+                tvTipo.setText(inmueble.getTipo());
+                tvUso.setText(inmueble.getUso());
+                tvAmbientes.setText(inmueble.getAmbientes() + "");
+                tvPrecio.setText("$" + inmueble.getPrecio());
                 cbEstado.setChecked(inmueble.isEstado());
                 ivImagenInmueble.setImageResource(inmueble.getImagen());
-
             }
         });
         inmuebleViewModel.cargarInmueble(getArguments());

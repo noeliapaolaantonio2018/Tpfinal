@@ -18,4 +18,8 @@
     <string name="Logout">Log out</string>
     <string name="Cerrar_sesión">Cerrar sesión</string>
     <string name="Propiedades">Propiedades</string>
+    <string name="Pago">Pago</string>
+    <string name="Contrato">Contrato</string>
+    <string name="Inmueble">Inmueble</string>
+    <string name="Inquilio">Inquilino</string>
 </resources>

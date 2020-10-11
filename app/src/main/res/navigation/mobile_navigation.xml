@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/perfilFragment">
+    app:startDestination="@id/perfilFragment">
 
     <fragment
         android:id="@+id/perfilFragment"
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/contratosFragment"
-        android:name="com.example.tpfinal.inquilinos.InquilinosFragment"
+        android:name="com.example.tpfinal.contratos.ContratosFragment"
         android:label="@string/Contratos"
         tools:layout="@layout/contratos_fragment" >
         <action
@@ -41,7 +41,20 @@
         android:id="@+id/pagosFragment"
         android:name="com.example.tpfinal.pagos.PagosFragment"
         android:label="@string/Pagos"
-        tools:layout="@layout/pagos_fragment" />
+        tools:layout="@layout/pagos_fragment" >
+        <action
+            android:id="@+id/action_pagosFragment_to_pagoFragment"
+            app:destination="@id/pagoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagoFragment"
+        android:name="com.example.tpfinal.pagos.PagoFragment"
+        android:label="@string/Pagos"
+        tools:layout="@layout/pago_fragment" >
+        <action
+            android:id="@+id/action_pagoFragment_to_pagosFragment"
+            app:destination="@id/pagosFragment" />
+    </fragment>
     <fragment
         android:id="@+id/logoutFragment"
         android:name="com.example.tpfinal.logout.LogoutFragment"
@@ -50,7 +63,7 @@
     <fragment
         android:id="@+id/inmuebleFragment"
         android:name="com.example.tpfinal.inmuebles.InmuebleFragment"
-        android:label="inmueble_fragment"
+        android:label="@string/Inmueble"
         tools:layout="@layout/inmueble_fragment" >
         <action
             android:id="@+id/action_inmuebleFragment_to_inmueblesFragment"
@@ -58,8 +71,8 @@
     </fragment>
     <fragment
         android:id="@+id/contratoFragment"
-        android:name="com.example.tpfinal.ContratoFragment"
-        android:label="contrato_fragment"
+        android:name="com.example.tpfinal.contratos.ContratoFragment"
+        android:label="@string/Contrato"
         tools:layout="@layout/contrato_fragment" >
         <action
             android:id="@+id/action_contratoFragment_to_contratosFragment"
@@ -68,7 +81,7 @@
     <fragment
         android:id="@+id/inquilinoFragment"
         android:name="com.example.tpfinal.inquilinos.InquilinoFragment"
-        android:label="inquilino_fragment"
+        android:label="@string/Inquilio"
         tools:layout="@layout/inquilino_fragment" >
         <action
             android:id="@+id/action_inquilinoFragment_to_inquilinosFragment"

@@ -11,12 +11,12 @@
         android:id="@+id/btEditar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="10dp"
         android:background="#E91E63"
         android:text="Editar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTelefono" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTelefono" />
 
     <Button
         android:id="@+id/btGuardar"
@@ -27,7 +27,7 @@
         android:text="Guardar"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTelefono" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTelefono" />
 
     <EditText
         android:id="@+id/etId"
@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/etNombre"
+        android:id="@+id/tvNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/etDNI"
+        android:id="@+id/tvDNI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/etApellido"
+        android:id="@+id/tvApellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -82,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -108,7 +108,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
-        android:id="@+id/etTelefono"
+        android:id="@+id/tvTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -137,7 +137,7 @@
         android:layout_marginTop="5dp"
         android:text="Nombre"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDNI" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDNI" />
 
     <TextView
         android:id="@+id/textView5"
@@ -147,7 +147,7 @@
         android:layout_marginTop="5dp"
         android:text="Apellido"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
 
     <TextView
         android:id="@+id/textView7"
@@ -167,7 +167,7 @@
         android:layout_marginTop="5dp"
         android:text="E-mail"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etApellido" />
+        app:layout_constraintTop_toBottomOf="@+id/tvApellido" />
 
     <TextView
         android:id="@+id/textView9"
@@ -177,7 +177,7 @@
         android:layout_marginTop="5dp"
         android:text="Contraseña"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
     <TextView
         android:id="@+id/textView10"
@@ -190,29 +190,11 @@
         app:layout_constraintTop_toBottomOf="@+id/etContraseña" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="37dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="208dp"
-        android:src="@android:drawable/btn_star_big_on"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="36dp"
-        android:layout_height="45dp"
-        android:src="?android:attr/alertDialogIcon"
-        tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="98dp"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="27dp"
-        android:layout_height="25dp"
-        android:src="@drawable/btn_facebook"
-        tools:layout_editor_absoluteX="381dp"
-        tools:layout_editor_absoluteY="0dp"
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/star_big_on"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

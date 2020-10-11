@@ -7,11 +7,11 @@
         <item
             android:id="@+id/perfilFragment"
             android:icon="@drawable/perfil"
-            android:title="Perfil" />
+            android:title="@string/Perfil" />
         <item
             android:id="@+id/inmueblesFragment"
             android:icon="@drawable/inmuebles"
-            android:title="@string/Propiedades" />
+            android:title="@string/Inmuebles" />
         <item
             android:id="@+id/inquilinosFragment"
             android:icon="@drawable/buscar"
@@ -27,7 +27,7 @@
         <item
             android:id="@+id/logoutFragment"
             android:icon="@drawable/cerrarsesion"
-            android:title="Cerrar sesion"/>
+            android:title="@string/Cerrar_sesión"/>
 
     </group>
 </menu>

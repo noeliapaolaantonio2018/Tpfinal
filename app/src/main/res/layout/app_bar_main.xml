@@ -30,6 +30,6 @@
 
     <include
         layout="@layout/content_main"
-        android:background="#F44336" />
+        android:background="#E91E63" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

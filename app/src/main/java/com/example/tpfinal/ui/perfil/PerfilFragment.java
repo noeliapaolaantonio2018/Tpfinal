@@ -41,12 +41,12 @@ public class PerfilFragment extends Fragment {
 
     private void inicializar(View view) {
         etId = view.findViewById(R.id.etId);
-        etDNI = view.findViewById(R.id.etDNI);
-        etNombre = view.findViewById(R.id.etNombre);
-        etApellido = view.findViewById(R.id.etApellido);
-        etEmail = view.findViewById(R.id.etEmail);
+        etDNI = view.findViewById(R.id.tvDNI);
+        etNombre = view.findViewById(R.id.tvNombre);
+        etApellido = view.findViewById(R.id.tvApellido);
+        etEmail = view.findViewById(R.id.tvEmail);
         etContraseña = view.findViewById(R.id.etContraseña);
-        etTelefono = view.findViewById(R.id.etTelefono);
+        etTelefono = view.findViewById(R.id.tvTelefono);
         btEditar = view.findViewById(R.id.btEditar);
         btGuardar = view.findViewById(R.id.btGuardar);
         perfilViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(PerfilViewModel.class);

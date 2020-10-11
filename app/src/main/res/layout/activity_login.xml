@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_primary">
+    android:background="@color/colorPrimary">
 
     <Button
         android:id="@+id/btLogin"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:background="@android:color/holo_purple"
+        android:layout_marginTop="64dp"
+        android:background="@color/colorPrimaryDark"
         android:text="Iniciar sesión"
         android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etContraseña" />
 
@@ -24,14 +24,14 @@
         android:id="@+id/etContraseña"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:background="#E91E63"
+        android:background="#9BC5C1"
         android:ems="10"
+
         android:hint="Contraseña"
         android:inputType="textPassword"
-
+        app:layout_constraintBottom_toTopOf="@+id/btLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUsuario" />
 
@@ -39,14 +39,13 @@
         android:id="@+id/etUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:background="#E91E63"
-        android:backgroundTint="#FFFFFF"
+        android:background="#9BC5C1"
         android:ems="10"
         android:hint="Usuario"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etContraseña"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
 
@@ -54,66 +53,31 @@
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:background="#E91E63"
+        android:layout_marginBottom="128dp"
         android:text="Inmobiliaria"
         android:textColor="@android:color/background_light"
         android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/etUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="70dp"
-        android:layout_height="59dp"
-        app:srcCompat="@android:drawable/btn_star_big_on"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="602dp"
-        tools:ignore="MissingConstraints" />
-
-    <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="305dp"
-        tools:layout_editor_absoluteY="689dp"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteX="198dp"
+        tools:layout_editor_absoluteY="643dp"
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="48dp"
-        android:layout_height="68dp"
-        app:srcCompat="@drawable/buscar"
-        tools:layout_editor_absoluteX="335dp"
-        tools:layout_editor_absoluteY="434dp"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="68dp"
-        android:layout_height="80dp"
-        app:srcCompat="@android:drawable/ic_lock_lock"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="81dp"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="51dp"
-        android:layout_height="43dp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="238dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="47dp"
-        android:layout_height="49dp"
-        app:srcCompat="@drawable/pagos"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="316dp"
+        android:id="@+id/imageView3"
+        android:layout_width="89dp"
+        android:layout_height="74dp"
+        app:srcCompat="@drawable/logout"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="45dp"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

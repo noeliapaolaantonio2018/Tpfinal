@@ -21,14 +21,14 @@ import com.example.tpfinal.modelo.Inquilino;
 public class InquilinoFragment extends Fragment {
 
     private InquilinoViewModel inquilinoViewModel;
-    private EditText etNombre;
-    private EditText etApellido;
-    private EditText etDNI;
-    private EditText etCodigo;
-    private EditText etEmail;
-    private EditText etTelefono;
-    private EditText etGarante;
-    private EditText etTelefonoGarante;
+    private TextView tvNombre;
+    private TextView tvApellido;
+    private TextView tvDNI;
+    private TextView tvCodigo;
+    private TextView tvEmail;
+    private TextView tvTelefono;
+    private TextView tvGarante;
+    private TextView tvTelefonoGarante;
 
     public InquilinoFragment() {
     }
@@ -44,27 +44,27 @@ public class InquilinoFragment extends Fragment {
 
 
     public void inicializar(View view) {
-        etNombre = view.findViewById(R.id.etNombre);
-        etApellido = view.findViewById(R.id.etApellido);
-        etCodigo = view.findViewById(R.id.etCodigo);
-        etDNI = view.findViewById(R.id.etDNI);
-        etEmail = view.findViewById(R.id.etEmail);
-        etTelefono = view.findViewById(R.id.etTelefono);
-        etGarante = view.findViewById(R.id.etGarante);
-        etTelefonoGarante = view.findViewById(R.id.etTelefonoGarante);
+        tvNombre = view.findViewById(R.id.tvNombre);
+        tvApellido = view.findViewById(R.id.tvApellido);
+        tvCodigo = view.findViewById(R.id.tvCodigo);
+        tvDNI = view.findViewById(R.id.tvDNI);
+        tvEmail = view.findViewById(R.id.tvEmail);
+        tvTelefono = view.findViewById(R.id.tvTelefono);
+        tvGarante = view.findViewById(R.id.tvGarante);
+        tvTelefonoGarante = view.findViewById(R.id.tvTelefonoGarante);
 
         inquilinoViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(InquilinoViewModel.class);
         inquilinoViewModel.getInquilino().observe(getViewLifecycleOwner(), new Observer<Inquilino>() {
             @Override
             public void onChanged(Inquilino inquilino) {
-                etNombre.setText(inquilino.getNombre());
-                etApellido.setText(inquilino.getApellido());
-                etCodigo.setText(inquilino.getIdInquilino() + "");
-                etDNI.setText(inquilino.getDNI());
-                etEmail.setText(inquilino.getEmail());
-                etTelefono.setText(inquilino.getTelefono());
-                etGarante.setText(inquilino.getNombreGarante());
-                etTelefonoGarante.setText(inquilino.getTelefonoGarante());
+                tvNombre.setText(inquilino.getNombre());
+                tvApellido.setText(inquilino.getApellido());
+                tvCodigo.setText(inquilino.getIdInquilino() + "");
+                tvDNI.setText(inquilino.getDNI());
+                tvEmail.setText(inquilino.getEmail());
+                tvTelefono.setText(inquilino.getTelefono());
+                tvGarante.setText(inquilino.getNombreGarante());
+                tvTelefonoGarante.setText(inquilino.getTelefonoGarante());
 
             }
         });

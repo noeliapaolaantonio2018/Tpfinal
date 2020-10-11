@@ -2,7 +2,9 @@ package com.example.tpfinal.modelo;
 
 import com.example.tpfinal.modelo.Propietario;
 
-public class Inmueble {
+import java.io.Serializable;
+
+public class Inmueble implements Serializable {
 
     private int idInmueble;
     private String direccion;

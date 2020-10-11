@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9C27B0"
-    tools:context=".inquilinos.InquilinosFragment">
+    tools:context=".inquilinos.InquilinosFragment"
+    android:background="#B2DFDFDF">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvInmuebles"
@@ -16,5 +16,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
