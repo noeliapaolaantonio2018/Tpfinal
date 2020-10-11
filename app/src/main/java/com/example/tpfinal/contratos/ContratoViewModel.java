@@ -25,8 +25,6 @@ public class ContratoViewModel extends ViewModel {
     }
 
     public void cargarContrato(Bundle bundle) {
-        //inscribo un inmueble o Id de inmueble, y buscaría en la base de datos el contrato  de ese inmueble
-        //En caso de no existir, la vista muestra un mensaje (Si partimos de la pestaña de contratos se supone que el inmueble tiene un contrato vigente)
         Inmueble inmueble = (Inmueble) bundle.get("inmueble");
         Contrato contrato = new Contrato();
         switch (inmueble.getIdInmueble()) {

@@ -28,7 +28,7 @@ public class ContratosFragment extends Fragment {
     private ContratosViewModel contratosViewModel;
     private ListView lvInmuebles;
     private InmuebleConContratoAdapter adapter;
-    public Context context;
+     Context context;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,

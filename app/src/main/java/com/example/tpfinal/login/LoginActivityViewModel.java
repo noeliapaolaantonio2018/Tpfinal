@@ -12,7 +12,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 public class LoginActivityViewModel extends AndroidViewModel {
-    private Context context;
+     Context context;
     private MutableLiveData<String> error;
     public LoginActivityViewModel(@NonNull Application application) {
         super(application);
