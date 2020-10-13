@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.tpfinal.R;
 import com.example.tpfinal.modelo.Pago;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +45,9 @@ public class PagoAdapter extends ArrayAdapter<Pago> {
         tvNumero.setText(pagos.get(position).getNumero() + "");
         tvContrato.setText(pagos.get(position).getIdContrato() + "");
         tvImporte.setText("$" + pagos.get(position).getImporte());
-        tvFecha.setText(pagos.get(position).getFechaDePago().toString());
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        String fechaParseada = formato.format(pagos.get(position).getFechaDePago());
+        tvFecha.setText(fechaParseada);
         return viewPago;
     }
 }

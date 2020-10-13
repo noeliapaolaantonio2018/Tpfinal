@@ -27,8 +27,8 @@ public class PagoViewModel extends ViewModel {
         return pagos;
     }
     public void cargarPagos(Bundle bundle) {
-        //Acá recibiríamos un inmueble o Id de inmueble, y buscaríamos en la base de datos el contrato vigente de ese inmueble y sus pagos
-        //En caso de no existir, la vista mostraría un mensaje (Si partimos de la pestaña de contratos se supone que el inmueble tiene un contrato y pagos vigente)
+        // Id de inmueble, y buscaríamos en la base de datos el contrato vigente de ese inmueble y sus pagos
+        // la vista mostraría un mensaje (Si partimos de la pestaña de contratos se supone que el inmueble tiene un contrato y pagos vigente)
         Inmueble inmueble = (Inmueble) bundle.get("inmueble");
         Log.d("salida", inmueble.getIdInmueble()+"");
         ArrayList<Pago> pagos = new ArrayList<>();

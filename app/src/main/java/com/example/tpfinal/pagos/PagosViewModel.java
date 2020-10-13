@@ -32,7 +32,7 @@ public class PagosViewModel extends AndroidViewModel {
     }
 
     public void cargarInmueblesConPagos() {
-        //Acá haríamos una consulta a la base de datos para traer los inmuebles con un contrato vigente (y por ende pagos)
+        // consulta a la base de datos para traer los inmuebles con un contrato vigente (y por ende pagos)
         ArrayList<Inmueble> inmuebles = new ArrayList<> ();
         inmuebles.add(new Inmueble(1, "Rivadavia 123", "Residencial", "Vivienda", 4, 20000, null, true, R.drawable.casa1));
         inmuebles.add(new Inmueble(2, "Colón 456", "Comercial", "Departamento", 2, 10000, null, true, R.drawable.casa2));

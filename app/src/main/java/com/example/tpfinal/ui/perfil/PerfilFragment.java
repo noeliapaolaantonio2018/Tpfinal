@@ -58,6 +58,7 @@ public class PerfilFragment extends Fragment {
                 etNombre.setText(propietario.getNombre());
                 etApellido.setText(propietario.getApellido());
                 etEmail.setText(propietario.getEmail());
+                etContraseña.setText(propietario.getContraseña());
                 etTelefono.setText(propietario.getTelefono());
             }
         });
@@ -73,6 +74,20 @@ public class PerfilFragment extends Fragment {
                 etEmail.setEnabled(true);
                 etContraseña.setEnabled(true);
                 etTelefono.setEnabled(true);
+
+            }
+        });
+        btGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btEditar.setVisibility(View.VISIBLE);
+                btGuardar.setVisibility(View.GONE);
+                etDNI.setEnabled(false);
+                etNombre.setEnabled(false);
+                etApellido.setEnabled(false);
+                etEmail.setEnabled(true);
+                etContraseña.setEnabled(false);
+                etTelefono.setEnabled(false);
 
             }
         });

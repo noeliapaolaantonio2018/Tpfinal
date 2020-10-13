@@ -1,8 +1,13 @@
 package com.example.tpfinal.inmuebles;
 
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -63,7 +68,12 @@ public class InmuebleFragment extends Fragment {
                 tvAmbientes.setText(inmueble.getAmbientes() + "");
                 tvPrecio.setText("$" + inmueble.getPrecio());
                 cbEstado.setChecked(inmueble.isEstado());
-                ivImagenInmueble.setImageResource(inmueble.getImagen());
+                Resources res = getResources();
+                Bitmap src = BitmapFactory.decodeResource(res, inmueble.getImagen());
+                RoundedBitmapDrawable dr = RoundedBitmapDrawableFactory.create(res, src);
+                dr.setCornerRadius(100.0f);
+                ivImagenInmueble.setImageDrawable(dr);
+
             }
         });
         inmuebleViewModel.cargarInmueble(getArguments());

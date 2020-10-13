@@ -22,6 +22,8 @@ import com.example.tpfinal.R;
 
 import com.example.tpfinal.modelo.Contrato;
 
+import java.text.SimpleDateFormat;
+
 public class ContratoFragment extends Fragment {
 
     private ContratoViewModel contratoViewModel;
@@ -55,10 +57,13 @@ public class ContratoFragment extends Fragment {
             @Override
             public void onChanged(Contrato contrato) {
                 tvCodigoContrato.setText(contrato.getIdContrato() + "");
-                tvFechaInicio.setText(contrato.getFechaInicio().toString());
-                tvFechaFin.setText(contrato.getFechaFin().toGMTString());
+                SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+                String inicioParseado = formato.format(contrato.getFechaInicio());
+                String finParseado = formato.format(contrato.getFechaFin());
+                tvFechaInicio.setText(inicioParseado);
+                tvFechaFin.setText(finParseado);
                 tvMontoAlquiler.setText("$" + contrato.getMontoAlquiler());
-                tvInquilino.setText("" + contrato.getIdInquilino());
+                tvInquilino.setText(contrato.getInquilino().getNombre() + " " + contrato.getInquilino().getApellido());
                 tvInmueble.setText("Inmueble en " + contrato.getInmueble().getDireccion());
             }
         });
